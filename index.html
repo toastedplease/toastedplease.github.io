@@ -1,0 +1,642 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Hiltingbury Counselling</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e69f1301-6502-44bd-9b4c-27c3a2a97aca" class="page serif"><header><img class="page-cover-image" src="Hiltingbury%20Counselling%2091d5cd36915b43ffa7081fddda8aab4a/WhatsApp_Image_2020-09-23_at_18.02.23.jpeg" style="object-position:center 62.5%"/><h1 class="page-title">Hiltingbury Counselling</h1></header><div class="page-body"><p id="9ebdfa30-16ab-4e11-98a0-8e78e0ca14e5" class="">
+</p><p id="ce6db36f-6d24-4b77-9b11-ea933b789c38" class=""> </p><hr id="f1b6e9fc-4724-43b6-bd33-8a31904c74c6"/><blockquote id="adf8b066-f23f-44be-ba3b-f73a13a80eeb" class=""><em>&quot;You can&#x27;t go back and change the beginning, but you can start where you are and change the ending&quot; - C.S. Lewis</em></blockquote><hr id="3e8cc55f-304d-4dcd-ab81-e2ae1c8efe80"/><p id="31d7ac24-a372-4ff3-bceb-dd1b4ac8425b" class="">Hello , my name is Divya and I am a fully qualified, experienced Humanistic Counsellor based in Chandlers Ford, Hampshire easily accessible from Andover, Basingstoke, Southampton and Winchester .</p><div id="11b43ee9-0356-4f4f-aaee-fe8c6b2cfc82" class="column-list"><div id="4c200985-0072-4f39-935d-3a93764373a6" style="width:56.25%" class="column"><p id="60cc1030-7d9a-4f6d-a3e4-13826240d095" class="">Counselling and Psychotherapy are clinically proven to help us understand our processes and offer us help to support our mental and emotional well-being. </p><p id="773e3cad-013c-492b-894c-3348fdd54dd9" class="">
+</p></div><div id="8b1982ee-1a4d-46d0-9604-8407f9f52398" style="width:43.75%" class="column"><figure id="91d5cd36-915b-43ff-a708-1fddda8aab4a" class="image"><a href="Hiltingbury%20Counselling%2091d5cd36915b43ffa7081fddda8aab4a/Untitled.png"><img style="width:144px" src="Hiltingbury%20Counselling%2091d5cd36915b43ffa7081fddda8aab4a/Untitled.png"/></a></figure></div></div><p id="b95c15c7-f1ca-433c-b424-e0a4386703e8" class="">  I draw upon a wide range of therapies including Humanistic, Transactional Analysis, CBT and mindfulness to help you overcome a wide range of issues.  I customise therapy in order  to meet your specific needs . I believe every person is unique and we will work at your pace. </p><p id="de4bed9b-d491-4176-aa2f-19f45f99b689" class="">
+</p><p id="768235da-93f4-422c-9393-57d247c61cd8" class=""> Sessions can be long term or short term.  It&#x27;s about you and I will ensure that you feel safe, listened to and facilitate the therapeutic space for you to achieve your goals through the process of therapy. </p><hr id="64e145c4-4ee8-4d79-a2c2-24850bd1511a"/><p id="2b21413d-e861-46b9-9ba2-0b519da62268" class=""><strong>Contact details</strong></p><p id="fc0da590-d4e2-467b-a8bd-58e25d8e847a" class="">Email: divyajogaicounselling@gmail.com</p><p id="616f8304-fafa-49a6-9311-5a4f54ee6412" class="">Phone: 07762159309</p><hr id="ac4f44da-e9cd-4730-99ab-b1bab93c194c"/><ul id="c5a81e72-20bb-4854-aa31-171fc43ee6fa" class="toggle"><li><details open=""><summary>Professional qualifications &amp; experience</summary><p id="c1b63210-78cd-4230-86b1-8ad2d9b4c320" class=""><strong>Qualifications</strong></p><ul id="e3c91a87-4cff-4d3b-9a6c-4c5fcf5ed004" class="bulleted-list"><li>Degree in Humanistic Counselling based (Middlesex University) </li></ul><ul id="22884476-be46-41b6-b5ec-6a7b8495f0a2" class="bulleted-list"><li>Currently studying for my CTA (equivalent to MSc) at the Berne Institute</li></ul><ul id="751d49d4-c63a-4401-810c-398dea91361f" class="bulleted-list"><li>ABC Certificate Course in Counselling Skills,Level 3, Eastleigh College</li></ul><p id="01409f5e-98d2-4a82-ae3c-cd37ebd7981a" class="">          TA101 ,The Link Centre . Sussex.</p><p id="0084221b-0888-4218-8160-86b67b1c63ff" class="">
+</p><p id="47c77007-84ab-4970-a3b5-0c25f9d40690" class="">Ph.D The Cultural Other in the Writings of D.H Lawrence , Rajasthan University,2003</p><p id="903a95b8-a547-4cf4-b69e-ea27156daef3" class="">M.A (English) University of Rajasthan,1995</p><p id="56bd2db8-1413-435e-b3cc-5991a3be629d" class="">B.A (English Honours, Psychology Subsidiary) Kanoria Girls College, Rajasthan University Jaipur 1993</p><p id="a718dffc-9d07-4830-a1fe-80f58dc5ebf0" class=""><strong>Experience</strong></p><p id="80fda880-14a0-44e7-a084-b6c6e547596e" class="">St Francis and Park Surgery ,Chandlers Ford</p><p id="f1a65148-5b5a-4aab-aa30-cfc75205923a" class="">University of Southampton Counselling Service (students and staff)</p><p id="0bf21e76-d2ae-4393-831c-502648af0809" class="">Yellow Door( Specialist services in Abuse and Domestic Violence)</p><p id="70fae49b-30aa-4e55-859c-b8ee88f760f3" class="">Options,Shirley -Gambling and Addictions</p><p id="3428e176-90be-4f37-a11f-998f86690633" class="">Own Private Counselling Practice for past 5 years ( Couples work and individual work)</p><p id="e61fab43-a2e8-4f8b-977f-2a945a26227f" class=""><strong>Memberships</strong></p><ul id="6dcee824-a8a2-48eb-a41b-902df92320c5" class="bulleted-list"><li>BACP(British Association of Counselling and Psychotherapy)</li></ul><ul id="17a2416a-b1c3-4a93-be74-2d7688cbd4c0" class="bulleted-list"><li>HACP( Hampshire Association of Counselling and Psychotherapy)</li></ul><ul id="f79d2d6d-e810-48ea-b7da-046f4e5c5ef3" class="bulleted-list"><li>UKATA (UK Association for Transactional Analysis)</li></ul><ul id="e216dd96-c58a-4c72-83a5-4094425e205e" class="bulleted-list"><li>I regularly engage in supervision and attend CPDs</li></ul><p id="6d937f0d-2266-4cd4-ae98-2335166fba2e" class=""><strong>Other</strong></p><ul id="c0ddabbc-7ac3-495b-a1fd-dc44e7843b12" class="bulleted-list"><li>Registered with Information Commissioners Office (ICO) for data protection</li></ul><ul id="b9a7b109-b658-4633-a1bb-f08f715911b6" class="bulleted-list"><li>Undergone an enhanced DBS check, enabling me to work with vulnerable adults</li></ul><ul id="7955cc2f-b98a-43ec-b565-ffef698182ab" class="bulleted-list"><li>Able to conduct lessons in Hindi </li></ul></details></li></ul><ul id="aa0d5945-1b31-4b17-8079-e4bba113ec91" class="toggle"><li><details open=""><summary>Topics I deal with</summary><ul id="06d5b1f1-3942-4446-961d-a05a78f43220" class="bulleted-list"><li>Anxiety and Depression</li></ul><ul id="43ba0b3c-56bd-4385-bc0f-4a8d9347d099" class="bulleted-list"><li>Loss and Bereavement </li></ul><ul id="5be0c78b-99de-4826-bf36-394a7e99920d" class="bulleted-list"><li>Childhood and Sexual Abuse</li></ul><ul id="f82105e5-1886-4798-ba6d-ca2dc0faf333" class="bulleted-list"><li>Cross Cultural and Identity Issues</li></ul><ul id="07b86637-c04b-4063-a190-06d3dc42a135" class="bulleted-list"><li>Gender, Body image,  Eating Disorders</li></ul><ul id="70761002-15e2-417d-acd2-b33c0102631d" class="bulleted-list"><li>Issues relating to third culture</li></ul><ul id="56cb481a-e407-43b4-b504-da01a9fff5d9" class="bulleted-list"><li>Retirement and Loneliness</li></ul><ul id="25f9bd73-9919-4acb-a7d0-a23c602dc3e1" class="bulleted-list"><li>Rape and Trauma</li></ul><ul id="9441acbe-32a4-492a-b5cf-e22b6e048ad7" class="bulleted-list"><li>Relationship Difficulties and career issues</li></ul><ul id="9b522197-5040-439b-9bc7-35469465d01c" class="bulleted-list"><li>Stress and Panic</li></ul><ul id="0f7902ce-a646-41b7-9c81-5838e5028609" class="bulleted-list"><li>Bullying</li></ul><ul id="5a360a03-cb00-4edc-aadc-fe537f24559f" class="bulleted-list"><li>Intrusive thoughts</li></ul></details></li></ul><ul id="2b69e838-cd34-4013-af05-15f30eb79768" class="toggle"><li><details open=""><summary>About me</summary><p id="361bd318-5cdd-4559-bcbb-5da0541a8537" class="">I was born and brought up in India and moved to the UK in 2005. My first career was in Academics in a reputable Government College in Rajasthan, India. I moved here with my preschool child  and 6 month old baby to join my busy husband. In the process of settling, adapting and integrating within the community  I played various volunteer roles in varying setting whilst raising  my young family, training  and developing my own support network.</p><p id="dc2a56a9-510c-4934-b60b-8518cd71e5ed" class=""> I enjoy working with people of all ethnicity and diverse backgrounds and I understand the impact of moving cultures and the challenges and joys it encompasses.  </p><p id="6ddefe37-7090-4a09-bb08-0a9a9e38b29b" class="">
+</p><p id="88b39abc-5d61-4f25-b786-a474f81bf2ce" class="">I come with a wealth of life experiences and understand the emotions of sadness, anger, scare and joy. Therapy is a process of healing and change can happen once individuals accept that and take the first step towards a new future.</p><p id="0ed7ad60-3390-4b67-a585-b79e289a7e1c" class="">I regards it as a privilege to work with people, joining them in their life journey and helping them to manage change effectively.</p></details></li></ul><ul id="88440a40-dca3-4144-958c-3fb0dad6b9be" class="toggle"><li><details open=""><summary>FAQ&#x27;s</summary><p id="2d4bd33c-c936-4e37-91bb-35f2beb320ee" class=""><strong>When are you available?</strong></p><p id="59fa33dc-515c-486f-88a2-3887ce6397c3" class="">I see clients from Monday to Friday from 8am to 6pm.</p><p id="95aa30ed-06d6-4975-bfd6-1f7fcd88cc1d" class="">Weekend sessions available  on Saturday  between9 to 12pm.</p><p id="82c5ff90-c075-4664-b2c8-8fd0a6dd3714" class="">
+</p><p id="8e2c78b3-e912-4213-9a82-47115b511537" class=""><strong>How long do the sessions last?</strong></p><p id="4d70a95b-457d-4043-94d4-687ee5825b16" class="">Individual sessions are 60 minutes and couples sessions are for 70 minutes.</p><p id="efa6864d-1a30-4196-874f-5ad9e0993d41" class="">
+</p><p id="655410bb-5fd4-4b92-91aa-13a94446c9cd" class=""><strong>How much do you charge?</strong></p><p id="b158b2e9-32e7-4b1c-bf7c-4d7e0a101704" class="">Fees are £50 for the individual sessions and 70 pounds for the couples session.</p><p id="20beb8f0-d855-4a73-aad4-08ab7290401f" class="">I offer a discounted rate for  students and people on lower income for £35.</p><p id="edc27fe0-259d-497c-a34c-134741399538" class="">
+</p><p id="f1deec18-e9df-4d49-a832-4b6ada5b075a" class=""><strong>Who do you work with?</strong></p><p id="e4a9de12-d253-48b0-bbd9-5ab26d1e1e99" class="">I work with  everyone over the age of seventeen.   </p><p id="ec036981-8df9-4cb8-b46c-b74eea5235ab" class="">
+</p><p id="b8e803dd-a11e-4eeb-a4e2-fe4c2d3fe20d" class=""><strong>What is your Cancellation Policy?</strong></p><p id="3d7e6cfc-bbe5-4b2a-8a17-c543682e0efb" class="">Individuals should be prepared to commit to regularly weekly sessions.</p><p id="d8953f86-ef0c-4164-bf29-f56c1d7e09a9" class="">No fee for cancellations more than 48 hours prior to the session.</p><p id="047b35a3-2337-456a-82a4-7ac1555253e7" class="">
+</p><p id="743e3cec-b721-4755-aece-bb561d23f8e2" class=""><strong>Where are you located?</strong></p><p id="a70fcf58-9761-4711-9123-be989effb20b" class="">I am located in the Hiltingbury area of Chandlers Ford in a quiet close.</p><p id="21df8efd-5dae-4f07-860b-52dde15890d6" class="">Full details available on request.</p><p id="922243a2-ad2a-4172-a0b7-f1e9c65e4afd" class="">
+</p><p id="ba27008c-2c87-4d64-90ed-8cca8b1fa761" class=""><strong>Is there a wheel chair Access?</strong></p><p id="5c3e840a-ad07-4350-916e-175eed71bfe1" class="">Unfortunately there is no wheelchair access.</p><p id="2781aa2d-7a41-4bd4-8bbb-9e62070691af" class="">
+</p><p id="388b81b6-6bfa-4c8d-9e4c-b042a0ed7c2e" class="">
+</p></details></li></ul><p id="82d504fa-1a5a-47b4-ab70-2a022dbf88f7" class="">
+</p><p id="13f036d9-ca1b-43d1-9c46-f8390a1c8018" class="">
+</p></div></article></body></html>
